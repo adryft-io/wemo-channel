@@ -14,7 +14,8 @@
     "prepush": "npm run lint && npm test",
     "postmerge": "npm install",
     "preversion": "npm test",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "start": "node api.js"
   },
   "repository": {
     "type": "git",
