@@ -8,7 +8,7 @@ var Consumer = require('sqs-consumer');
 server.listen(8080);
   
 var worker = Consumer.create({
-  queueUrl: process.env.queue_URL,
+  queueUrl: 'https://sqs.us-east-1.amazonaws.com/971458161724/wemo-channel',
   handleMessage: function (message, done) {
     io.emit("message", message.Body);
     done();
@@ -16,7 +16,7 @@ var worker = Consumer.create({
   },
   sqs: new AWS.SQS()
 });
-worker.on('error', (err) => {
+worker.on('error', function (err) {
   console.log('err from app.js is', err.message);
 });
 worker.start();

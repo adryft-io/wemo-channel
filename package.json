@@ -7,14 +7,6 @@
     "examples": "./examples"
   },
   "scripts": {
-    "test": "istanbul test _mocha",
-    "test-cov": "istanbul cover _mocha",
-    "test-e2e": "mocha ./test-e2e",
-    "lint": "eslint *.js",
-    "prepush": "npm run lint && npm test",
-    "postmerge": "npm install",
-    "preversion": "npm test",
-    "postversion": "git push && git push --tags",
     "start": "node api.js"
   },
   "repository": {
