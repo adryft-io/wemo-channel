@@ -1,0 +1,8 @@
+FROM node
+RUN mkdir -p /usr/src/wemo-api
+WORKDIR /usr/src/wemo-api
+COPY package.json /usr/src/wemo-api
+RUN npm install
+COPY . /usr/src/wemo-api
+EXPOSE 8080
+CMD [ "npm", "start" ]

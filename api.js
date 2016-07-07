@@ -1,9 +1,8 @@
 var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io').listen(server);
-require('dotenv').config();
+require('dotenv').config({silent: true});
 var AWS = require('aws-sdk');
-AWS.config.credentials =  new AWS.SharedIniFileCredentials({ profile: 'newreactions' });
 AWS.config.update({region: 'us-east-1'});
 var Consumer = require('sqs-consumer');
 server.listen(8080);
