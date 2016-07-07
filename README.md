@@ -1,2 +1,1 @@
-WemoAPI server for newreactions
-
+wemo-channel for new reactions
