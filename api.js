@@ -16,7 +16,7 @@ var worker = Consumer.create({
   },
   sqs: new AWS.SQS()
 });
-worker.on('error', (err) => {
+worker.on('error', function (err) {
   console.log('err from app.js is', err.message);
 });
 worker.start();
